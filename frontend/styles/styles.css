@@ -1,0 +1,34 @@
+html {
+    font-size: 10px;
+    font-family: "Open Sans", sans-serif;
+    background-color: #E1E2E3;
+    color: #313233;
+}
+
+.showImage  {
+    height: 20vh;
+    display: block;
+    margin: 0px auto;
+    border-radius: 5px;
+}
+
+.showContainer {
+    height: 20%;
+    width: 95%;
+    display: flex;
+    background-color: #C2c2c2;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+.showText {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.recommenders {
+    display: flex;
+    justify-content: space-evenly;
+}
