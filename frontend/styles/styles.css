@@ -3,6 +3,34 @@ html {
     font-family: "Open Sans", sans-serif;
     background-color: #E1E2E3;
     color: #313233;
+}  
+
+header {
+    display: flex;
+    position: fixed;
+    height: 7vh;
+    width: 100%;
+    background-color: #313233;
+    color: #E1E2E3;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    top: 0px;
+    left: 0px;
+}
+
+h1 {
+    margin: 1px auto;
+    align-items: center;
+}
+
+.logo {
+    height: 5vh;
+    padding: 5px;
+}
+
+main {
+    padding-top: 7vh;
 }
 
 .showImage  {
