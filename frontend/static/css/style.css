@@ -41,6 +41,19 @@ h1 {
     font-size: 35px;
 }
 
+h2 {
+    margin: 13px, auto, 1px, 7px;
+    font-size: 25px;
+    color:#ffffff;
+}
+
+h3 {
+    margin: 13px, auto, 1px, 7px;
+    font-size: 47px;
+    margin-top:30vh;
+    margin-left:3vh;
+}
+
 .logo {
     height: 8.5vh;
     padding: 5px;
@@ -106,6 +119,31 @@ main {
 }
 
 .recommenders {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.large_Dino {
+    height: 80vh;
+    display: block;
+}
+
+.homepage {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    cursor: pointer;
+    background-color: rgb(24, 105, 172);
+    padding: 10px ;
+    border: none;
+    text-align:center;
+    display:inline-block;
+    margin-bottom:1000px;
+}
+
+.buttons {
     display: flex;
     justify-content: space-evenly;
 }
