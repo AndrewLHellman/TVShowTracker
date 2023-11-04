@@ -24,9 +24,9 @@ function serverRequest () {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',
-                'Accept': 'application/json'
+                //'Accept': 'application/json'
             },
-            body:JSON.stringify(showlist)}).then(res=>{
+            /*body:JSON.stringify(showlist)*/}).then(res=>{
                 if(res.ok){
                     return res.json()
                 }else{
