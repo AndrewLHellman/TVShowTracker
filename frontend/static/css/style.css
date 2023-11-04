@@ -5,6 +5,16 @@ html {
     color: #313233;
 }  
 
+a {
+    color:#E1E2E3;
+    text-decoration: none;
+}
+
+a:visited {
+    color:#E1E2E3;
+    text-decoration: none;
+}
+
 header {
     display: flex;
     position: fixed;
