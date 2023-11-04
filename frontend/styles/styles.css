@@ -8,7 +8,7 @@ html {
 header {
     display: flex;
     position: fixed;
-    height: 7vh;
+    height: 9vh;
     width: 100%;
     background-color: #313233;
     color: #E1E2E3;
@@ -20,17 +20,17 @@ header {
 }
 
 h1 {
-    margin: 1px auto;
-    align-items: center;
+    margin: 13px, auto, 1px, 7px;
+    font-size: 35px;
 }
 
 .logo {
-    height: 6vh;
+    height: 8.5vh;
     padding: 5px;
 }
 
 main {
-    padding-top: 7vh;
+    padding-top: 8.5vh;
 }
 
 .showImage  {
