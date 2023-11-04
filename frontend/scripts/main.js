@@ -2,11 +2,14 @@
 const mainContainer = document.querySelector("main");
 
 let containerNum = 6;
-let arrestedDevelopmentDesc = "Arrested Development is an American television sitcom created by Mitchell Hurwitz. It aired on Fox for three seasons from November 2, 2003, to February 10, 2006, followed by two seasons on Netflix, season four being released in 2013 and season five being released in 2018 and 2019."
-let arrestedDevelopmentGenre = "Comedy"
-let arrestedDevelopmentRecs = ["Tessa", "Andrew", "LeeAnn", "Jenaya"]
+const arrestedDevelopment = {
+  image: "images/ArrestedDevelopment.jpg",
+  description: "Arrested Development is an American television sitcom created by Mitchell Hurwitz. It aired on Fox for three seasons from November 2, 2003, to February 10, 2006, followed by two seasons on Netflix, season four being released in 2013 and season five being released in 2018 and 2019.",
+  genre: "Comedy",
+  recommenders: ["Tessa", "Andrew", "LeeAnn", "Jenaya", "Jeffrey"]
+}
 
-function createShowRec () {
+function createShowRec (show) {
     let showContainer = document.createElement("div");
     showContainer.className = "showContainer";
     showContainer.id = `show-${containerNum}`;
@@ -14,7 +17,7 @@ function createShowRec () {
     let showImage = document.createElement("img");
     showImage.className = "showImage";
     showImage.id = `showImg-${containerNum}`;
-    showImage.src = "images/ArrestedDevelopment.jpg"
+    showImage.src = show["image"];
     showContainer.appendChild(showImage);
 
     let showText = document.createElement("div");
@@ -23,21 +26,21 @@ function createShowRec () {
 
     let showDesc = document.createElement("p");
     showDesc.className = "showDesc";
-    showDesc.textContent = arrestedDevelopmentDesc;
+    showDesc.textContent = show["description"];
     showText.appendChild(showDesc);
 
     let showGenre = document.createElement("p");
     showGenre.className = "showGenre";
-    showGenre.textContent = `Genre: ${arrestedDevelopmentGenre}`;
+    showGenre.textContent = `Genre: ${show["genre"]}`;
     showText.appendChild(showGenre);
 
     let recommenders = document.createElement("p");
     recommenders.className = "recommenders";
     recommenders.textContent = "Recommenders: ";
     
-    for (let i = 0; i < arrestedDevelopmentRecs.length; i++) {
+    for (let i = 0; i < Math.min(show["recommenders"].length, 4); i++) {
         let recommender = document.createElement("span");
-        recommender.textContent = arrestedDevelopmentRecs[i];
+        recommender.textContent = show["recommenders"][i];
         recommenders.appendChild(recommender);
     }
     
@@ -49,5 +52,5 @@ function createShowRec () {
 }
 
 myButton.onclick = () => {
-    createShowRec();
+    createShowRec(arrestedDevelopment);
 };
