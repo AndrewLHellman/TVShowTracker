@@ -23,7 +23,7 @@ kimsConvenience = {
     "recommenders": ["Andrew"]
 }
 
-showlist = [arrestedDevelopment, kimsConvenience];
+showlist = [arrestedDevelopment, kimsConvenience]
 
 @app.route("/reciever", methods=["POST"])
 def postME():

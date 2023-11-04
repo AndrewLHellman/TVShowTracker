@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
     <title>TV Show Tracker</title>
   </head>
   <body>
     <header>
         <section class="branding">
-            <img class="logo" src="images/Logo.PNG" />
+            <img class="logo" src="{{ url_for('static', filename= 'images/Logo.PNG') }}" />
             <h1>TVRex</h1>
         </section>
         <nav>
@@ -24,7 +24,7 @@
     </main>
     <footer>
       <button id="myButton">Load More</button>
-      <script src="scripts/main.js"></script>
+      <script src="{{ url_for('static', filename= 'scripts/main.js') }}"></script>
     </footer>
   </body>
 </html>
