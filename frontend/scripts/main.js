@@ -18,6 +18,27 @@ const kimsConvenience = {
 
 showlist = [arrestedDevelopment, kimsConvenience];
 
+function serverRequest () {
+    fetch("http://127.0.0.1:5000/reciever",
+        {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body:JSON.stringify(showlist)}).then(res=>{
+                if(res.ok){
+                    return res.json()
+                }else{
+                    alert("Something is wrong")
+                }
+            }).then(jsonResponse=>{
+                createShowRec(jsonResponse)
+            }
+            ).catch((err) => console.error(err));
+
+}
+
 function createShowRec (show) {
     let showContainer = document.createElement("div");
     showContainer.className = "showContainer";
@@ -63,16 +84,14 @@ function createShowRec (show) {
 // Bottom of page dectector from stackOverflow's Dekel at https://stackoverflow.com/questions/9439725/how-to-detect-if-browser-window-is-scrolled-to-bottom
 
 for (let i = 0; i < 10; i++) {
-    createShowRec(showlist[Math.floor(Math.random() * showlist.length)]);
+    serverRequest();
 }
 
 window.onscroll = function(ev) {
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        createShowRec(showlist[Math.floor(Math.random() * showlist.length)]);
-    }
+    serverRequest();
 };
 
 
 myButton.onclick = () => {
-    createShowRec(showlist[Math.floor(Math.random() * showlist.length)]);
+    serverRequest();
 };
