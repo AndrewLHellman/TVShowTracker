@@ -9,6 +9,15 @@ const arrestedDevelopment = {
   recommenders: ["Tessa", "Andrew", "LeeAnn", "Jenaya", "Jeffrey"]
 }
 
+const kimsConvenience = {
+    image: "images/KimsConvenience.jpg",
+    description: "Kim's Convenience (Korean: 김씨네 편의점; Hanja: 金氏네 便宜店; RR: Gimssine Pyeonuijeon) is a Canadian television sitcom that aired on CBC Television from October 2016 to April 2021. It depicts the Korean Canadian Kim family that runs a convenience store in the Moss Park neighbourhood of Toronto: parents \"Appa\" (Paul Sun-Hyung Lee) and \"Umma\" (Jean Yoon) – Korean for dad and mom, respectively – along with their daughter Janet (Andrea Bang) and estranged son Jung (Simu Liu). Other characters include Jung's friend and coworker Kimchee (Andrew Phung), his manager Shannon (Nicole Power) and Janet's friend Gerald Tremblay (Ben Beauchemin). The series is based on Ins Choi's 2011 play of the same name.",
+    genre: "Comedy",
+    recommenders: ["Andrew"]
+}
+
+showlist = [arrestedDevelopment, kimsConvenience];
+
 function createShowRec (show) {
     let showContainer = document.createElement("div");
     showContainer.className = "showContainer";
@@ -52,5 +61,6 @@ function createShowRec (show) {
 }
 
 myButton.onclick = () => {
-    createShowRec(arrestedDevelopment);
+
+    createShowRec(showlist[Math.floor(Math.random() * showlist.length)]);
 };
