@@ -60,6 +60,15 @@ function createShowRec (show) {
     mainContainer.appendChild(showContainer);
 }
 
+// Bottom of page dectector from stackOverflow's Dekel at https://stackoverflow.com/questions/9439725/how-to-detect-if-browser-window-is-scrolled-to-bottom
+
+window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        createShowRec(showlist[Math.floor(Math.random() * showlist.length)]);
+    }
+};
+
+
 myButton.onclick = () => {
 
     createShowRec(showlist[Math.floor(Math.random() * showlist.length)]);
