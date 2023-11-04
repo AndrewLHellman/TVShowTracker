@@ -17,6 +17,13 @@ header {
     border: 0px;
     top: 0px;
     left: 0px;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
 }
 
 h1 {
@@ -27,6 +34,37 @@ h1 {
 .logo {
     height: 8.5vh;
     padding: 5px;
+}
+
+nav {
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #313233;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: #E1E2E3;
+    text-align: center;
+    padding: 2vh 3vw;
+    text-decoration: none;
+    margin: 1.5vh 5px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+li a:hover {
+    background-color: #111213;
 }
 
 main {
