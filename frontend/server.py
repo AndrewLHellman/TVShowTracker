@@ -12,5 +12,9 @@ def index():
 def tvshows():
     return render_template("tvshows.html")
 
+@app.route("/movies")
+def movies():
+    return render_template("movies.html")
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80, debug=True)
