@@ -19,7 +19,7 @@ const kimsConvenience = {
 showlist = [arrestedDevelopment, kimsConvenience];
 
 function serverRequest () {
-    fetch("http://127.0.0.1:5000/reciever",
+    fetch("http://34.170.130.159:5000/reciever",
         {
             method: 'POST',
             headers: {
@@ -47,7 +47,7 @@ function createShowRec (show) {
     let showImage = document.createElement("img");
     showImage.className = "showImage";
     showImage.id = `showImg-${containerNum}`;
-    showImage.src = `http://127.0.0.1:5000/images?image_file_name=${show["image"]}`;
+    showImage.src = `http://34.170.130.159:5000/images?image_file_name=${show["image"]}`;
     showContainer.appendChild(showImage);
 
     let showText = document.createElement("div");
