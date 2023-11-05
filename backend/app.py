@@ -11,7 +11,7 @@ cors = CORS(app)
 
 #pasteShows
 
-with open("data/pasteShowToIds", "r") as show_id_file:
+with open("data.pasteShowToIds", "r") as show_id_file:
    show_ids = json.load(show_id_file).keys()
 
 arrestedDevelopment = {
