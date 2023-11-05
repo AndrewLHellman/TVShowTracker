@@ -4,7 +4,7 @@ def create(titleID):
 
     headers = {
         "accept": "application/json",
-        "Authorization": ""
+        "Authorization": "YOUR_API_KEY"
     }
 
     detailsURL = "https://api.themoviedb.org/3/tv/"+str(titleID)+"?language=en-US"
