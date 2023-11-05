@@ -59,6 +59,12 @@ function createShowRec (show) {
     showText.className = "showText";
     showText.id = `showText-${containerNum}`;
 
+    let showName = document.createElement ("div");
+    showName.className = "showName";
+    showName.id = `showName-${containerNum}`;
+    showName.textContent = show["title"];
+    showText.appendChild(showName);
+
     let showDesc = document.createElement("p");
     showDesc.className = "showDesc";
     showDesc.textContent = show["summary"];

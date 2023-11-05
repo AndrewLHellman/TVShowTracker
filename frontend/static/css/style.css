@@ -109,7 +109,6 @@ main {
     padding: 5px;
     border-radius: 5px;
     margin: 10px auto;
-    justify-content: space-between;
 }
 
 .showText {
@@ -119,8 +118,6 @@ main {
 }
 
 .recommenders {
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .large_Dino {

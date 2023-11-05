@@ -14,27 +14,6 @@ cors = CORS(app)
 with open("data/pasteShowsToIds.json", "r") as show_id_file:
    show_ids = list(json.load(show_id_file).values())
 
-arrestedDevelopment = {
-  "image": "https://image.tmdb.org/t/p/w500/qMzwO952hMWQSCfHkp7IL20s4K7.jpg",
-  "description": "Arrested Development is an American television sitcom created by Mitchell Hurwitz. It aired on Fox for three seasons from November 2, 2003, to February 10, 2006, followed by two seasons on Netflix, season four being released in 2013 and season five being released in 2018 and 2019.",
-  "genre": "Comedy",
-  "streamingService": "Netflix",
-  "recommenders": ["Tessa", "Andrew", "LeeAnn", "Jenaya", "Jeffrey"]
-}
-
-kimsConvenience = {
-    "image": "https://image.tmdb.org/t/p/w500/82Vue6MPuYZzlpggR65cvWdBdy.jpg",
-    "description": "Kim's Convenience (Korean: 김씨네 편의점; Hanja: 金氏네 便宜店; RR: Gimssine Pyeonuijeon) is a Canadian television sitcom that aired on CBC Television from October 2016 to April 2021. It depicts the Korean Canadian Kim family that runs a convenience store in the Moss Park neighbourhood of Toronto: parents \"Appa\" (Paul Sun-Hyung Lee) and \"Umma\" (Jean Yoon) – Korean for dad and mom, respectively – along with their daughter Janet (Andrea Bang) and estranged son Jung (Simu Liu). Other characters include Jung's friend and coworker Kimchee (Andrew Phung), his manager Shannon (Nicole Power) and Janet's friend Gerald Tremblay (Ben Beauchemin). The series is based on Ins Choi's 2011 play of the same name.",
-    "genre": "Comedy",
-    "streamingService": "Netflix",
-    "recommenders": ["Andrew"]
-}
-
-
-showlist = [arrestedDevelopment, kimsConvenience]
-
-showlist[randint(0, (len(showlist)) - 1)]
-
 @app.route("/reciever", methods=["POST"])
 def postME():
     #data = request.get_json()
