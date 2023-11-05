@@ -47,7 +47,7 @@ function createShowRec (show) {
     let showImage = document.createElement("img");
     showImage.className = "showImage";
     showImage.id = `showImg-${containerNum}`;
-    showImage.src = `https://image.tmdb.org/t/p/w500${test['poster']['file_path']}`;
+    showImage.src = `https://image.tmdb.org/t/p/w500${show['poster']['file_path']}`;
     showContainer.appendChild(showImage);
 
     let showText = document.createElement("div");
