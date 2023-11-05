@@ -47,7 +47,7 @@ function createShowRec (show) {
     let showImage = document.createElement("img");
     showImage.className = "showImage";
     showImage.id = `showImg-${containerNum}`;
-    showImage.src = show[image];
+    showImage.src = show["image"];
     showContainer.appendChild(showImage);
 
     let showText = document.createElement("div");
