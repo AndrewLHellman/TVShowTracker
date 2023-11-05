@@ -47,7 +47,7 @@ function createShowRec (show) {
     let showImage = document.createElement("img");
     showImage.className = "showImage";
     showImage.id = `showImg-${containerNum}`;
-    showImage.src = show["image"];
+    showImage.src = `https://image.tmdb.org/t/p/w500${test['poster']['file_path']}`;
     showContainer.appendChild(showImage);
 
     let showText = document.createElement("div");
@@ -56,7 +56,7 @@ function createShowRec (show) {
 
     let showDesc = document.createElement("p");
     showDesc.className = "showDesc";
-    showDesc.textContent = show["description"];
+    showDesc.textContent = show["summary"];
     showText.appendChild(showDesc);
 
     let showGenre = document.createElement("p");
@@ -68,11 +68,9 @@ function createShowRec (show) {
     recommenders.className = "recommenders";
     recommenders.textContent = "Recommenders: ";
     
-    for (let i = 0; i < Math.min(show["recommenders"].length, 4); i++) {
-        let recommender = document.createElement("span");
-        recommender.textContent = show["recommenders"][i];
-        recommenders.appendChild(recommender);
-    }
+    let recommender = document.createElement("span");
+    recommender.textContent = "Paste Magazine";
+    recommenders.appendChild(recommender);
     
     showText.appendChild(recommenders);
 

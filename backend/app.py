@@ -11,6 +11,9 @@ cors = CORS(app)
 
 #pasteShows
 
+with open("data/pasteShowToIds", "r") as show_id_file:
+   show_ids = json.load(show_id_file).keys()
+
 arrestedDevelopment = {
   "image": "https://image.tmdb.org/t/p/w500/qMzwO952hMWQSCfHkp7IL20s4K7.jpg",
   "description": "Arrested Development is an American television sitcom created by Mitchell Hurwitz. It aired on Fox for three seasons from November 2, 2003, to February 10, 2006, followed by two seasons on Netflix, season four being released in 2013 and season five being released in 2018 and 2019.",
@@ -27,12 +30,15 @@ kimsConvenience = {
     "recommenders": ["Andrew"]
 }
 
+
 showlist = [arrestedDevelopment, kimsConvenience]
+
+showlist[randint(0, (len(showlist)) - 1)]
 
 @app.route("/reciever", methods=["POST"])
 def postME():
     #data = request.get_json()
-    data = jsonify(showlist[randint(0, (len(showlist)) - 1)])
+    data = jsonify(create(show_ids[randint(0, (len(show_ids) - 1))]))
     return data
 
 # Creation of this was aided by Google Bard
