@@ -18,6 +18,10 @@ const kimsConvenience = {
 
 showlist = [arrestedDevelopment, kimsConvenience];
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+ }
+
 function serverRequest () {
     fetch("http://34.170.130.159:5000/reciever",
         {
@@ -36,6 +40,7 @@ function serverRequest () {
                 createShowRec(jsonResponse)
             }
             ).catch((err) => console.error(err));
+    
 
 }
 
@@ -86,7 +91,7 @@ for (let i = 0; i < 10; i++) {
 }
 
 window.onscroll = function(ev) {
-    serverRequest();
+    sleep(100).then(serverRequest());
 };
 
 
