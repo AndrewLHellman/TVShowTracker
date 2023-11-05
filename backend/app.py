@@ -12,7 +12,7 @@ cors = CORS(app)
 #pasteShows
 
 with open("data/pasteShowsToIds.json", "r") as show_id_file:
-   show_ids = json.load(show_id_file).keys()
+   show_ids = list(json.load(show_id_file).values())
 
 arrestedDevelopment = {
   "image": "https://image.tmdb.org/t/p/w500/qMzwO952hMWQSCfHkp7IL20s4K7.jpg",
